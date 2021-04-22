@@ -72,14 +72,27 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="col-md-12">
-                Please select your overall experience with Bob the builder.
-                <ul>
-                    <li><img src="http://localhost/public/images/img/1.png" /><input type="radio" name="rating" value="1"></li>
-                    <li><img src="/resources/img/2.png" /><input type="radio" name="rating" value="2"></li>
-                    <li><img src="/resources/img/3.png" /><input type="radio" name="rating" value="3"></li>
-                    <li><img src="/resources/img/4.png" /><input type="radio" name="rating" value="4"></li>
-                    <li><img src="/resources/img/5.png" /><input type="radio" name="rating" value="5"></li>
-                </ul>
+            <p>Please select your overall experience with Bob the builder.</p>
+                <label>
+                    <input type="radio" name="rating" value="1">
+                    <img src="{{asset('images/1.png')}}" />
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="2">
+                    <img src="{{asset('images/2.png')}}" />
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="3">
+                    <img src="{{asset('images/3.png')}}" />
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="4">
+                    <img src="{{asset('images/4.png')}}" />
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="5">
+                    <img src="{{asset('images/5.png')}}" />
+                </label>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

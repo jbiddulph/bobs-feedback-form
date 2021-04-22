@@ -14,6 +14,12 @@ use App\Http\Controllers\ReviewController;
 */
 Route::resource('reviews', ReviewController::class);
 
+// Route::get('addreview', 'ReviewController@create')->name('addreview');
+// Route::get('addreview', 'App\Http\Controllers\ReviewController@create')->name('addreview');
+
+Route::get('/addreview', function () {
+    return view('create');
+})->name('addreview');
 
 Route::get('/', function () {
     return view('welcome');
