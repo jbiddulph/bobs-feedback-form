@@ -32088,6 +32088,14 @@ select {
   --tw-backdrop-sepia: sepia(100%);
 }
 
+html body {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  margin-top:40px;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
