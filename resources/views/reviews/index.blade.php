@@ -1,3 +1,6 @@
+@inject('pro', 'App\Http\Controllers\ReviewController')
+<?php $avRating='';
+  $avRating=$pro->getAverageRating();?>
 @extends('reviews.layout')
 
 @section('content')
@@ -17,6 +20,8 @@
             <p>{{ $message }}</p>
         </div>
     @endif
+
+    <h3>Average rating <strong>{{ $avRating }}</strong></h3>
 
     <table class="table table-bordered">
         <tr>

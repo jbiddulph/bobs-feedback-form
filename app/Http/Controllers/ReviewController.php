@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
+
+    public function getAverageRating(){
+        $averageRating = Review::selectRaw('SUM(rating)/COUNT(id) AS avg_rating')->first()->avg_rating;
+
+        return $averageRating;
+    }
+
     /**
      * Display a listing of the resource.
      *
