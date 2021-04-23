@@ -1,6 +1,6 @@
-@inject('pro', 'App\Http\Controllers\ReviewController')
+@inject('reviews', 'App\Http\Controllers\ReviewController')
 <?php $avRating='';
-  $avRating=$pro->getAverageRating();?>
+  $avRating=$reviews->getAverageRating();?>
 @extends('reviews.layout')
 
 @section('content')
