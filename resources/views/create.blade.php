@@ -43,7 +43,14 @@
         }
     </style>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/exacti/floating-labels@latest/floating-labels.min.css" media="screen">
     <style>
+        .feedback-form-holder {
+            width: 810px;
+        }
+        .row {
+            margin-bottom:10px;
+        }
         /* HIDE RADIO */
         [type=radio] {
         position: absolute;
@@ -69,6 +76,28 @@
             -webkit-box-shadow: 2px 2px 10px 2px rgb(131, 23, 224);
             box-shadow: 2px 2px 10px 2px rgb(131, 23, 224);
         }
+        label.rating {
+            margin-right:15px;
+        }
+        .submit-button {
+            width:210px;
+            border-radius:14px;
+        }
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom:20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom:40px;
+        }
+        input {
+            font-size:16px;
+        }
+        label {
+            font-size:14px;
+        }
     </style>
     </head>
     <body class="antialiased">
@@ -90,7 +119,8 @@
 
             @extends('layouts.boblayout')
 
-                @section('content')
+            @section('content')
+            <div class="feedback-form-holder">
                 <div class="row">
                     <div class="col-lg-12 margin-tb">
                         <div class="pull-left">
@@ -115,82 +145,73 @@
                     @csrf
 
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <strong>Full Name:</strong>
-                                    <input type="text" name="fullName" class="form-control" placeholder="Enter Full Name">
-                                </div>
+                        <div class="col-md-6">
+                            <div class="form-label-group in-border">
+                                <input type="text" name="fullName" class="form-control" placeholder="Enter Full Name">
+                                <label for="tt3">Your name <span class="mandatory">*</span></label>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <strong>Phone Number:</strong>
-                                    <input type="text" name="phoneNumber" class="form-control" placeholder="Enter Phone Number">
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-label-group in-border">
+                                <input type="text" name="phoneNumber" class="form-control" placeholder="Enter Phone Number">
+                                <label for="tt3">Phone number <span class="mandatory">*</span></label>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <strong>Post Code:</strong>
-                                    <input type="text" name="postCode" class="form-control" placeholder="Enter Post Code">
-                                </div>
+                        <div class="col-md-6">
+                            <div class="form-label-group in-border">
+                                <input type="text" name="postCode" class="form-control" placeholder="Enter Post Code">
+                                <label for="tt3">Postcode <span class="mandatory">*</span></label>
                             </div>
+                        </div>
 
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <strong>Job Number:</strong>
-                                    <input type="text" name="jobNumber" class="form-control" placeholder="Enter Job Number">
-                                </div>
+                        <div class="col-md-6">
+                            <div class="form-label-group in-border">
+                                <input type="text" name="jobNumber" class="form-control" placeholder="Enter Job Number">
+                                <label for="tt3">Job number <span class="mandatory">*</span></label>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <strong>Feedback:</strong>
-                                    <textarea class="form-control" style="height:150px" name="feedback" placeholder="Enter Your Feedback"></textarea>
-                                </div>
+                            <div class="form-label-group in-border">
+                                <textarea class="form-control" style="height:150px" name="feedback" placeholder="Enter Your Feedback"></textarea>
+                                <label for="tt3">Your feedback <span class="mandatory">*</span></label>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="col-md-12">
-                                <p>Please select your overall experience with Bob the builder.</p>
-                                <label>
-                                    <input type="radio" name="rating" value="5">
-                                    <img src="{{asset('images/5.png')}}" />
-                                </label>
-                                <label>
-                                    <input type="radio" name="rating" value="4">
-                                    <img src="{{asset('images/4.png')}}" />
-                                </label>
-                                <label>
-                                    <input type="radio" name="rating" value="3">
-                                    <img src="{{asset('images/3.png')}}" />
-                                </label>
-                                <label>
-                                    <input type="radio" name="rating" value="2">
-                                    <img src="{{asset('images/2.png')}}" />
-                                </label>
-                                <label>
-                                    <input type="radio" name="rating" value="1">
-                                    <img src="{{asset('images/1.png')}}" />
-                                </label>
-                            </div>
+                            <p>Please select your overall experience with Bob the builder.</p>
+                            <label class="rating">
+                                <input type="radio" name="rating" value="5"  checked="checked">
+                                <img src="{{asset('images/5.png')}}" />
+                            </label>
+                            <label class="rating">
+                                <input type="radio" name="rating" value="4">
+                                <img src="{{asset('images/4.png')}}" />
+                            </label>
+                            <label class="rating">
+                                <input type="radio" name="rating" value="3">
+                                <img src="{{asset('images/3.png')}}" />
+                            </label>
+                            <label class="rating">
+                                <input type="radio" name="rating" value="2">
+                                <img src="{{asset('images/2.png')}}" />
+                            </label>
+                            <label class="rating">
+                                <input type="radio" name="rating" value="1">
+                                <img src="{{asset('images/1.png')}}" />
+                            </label>
                         </div>
                         <div class="mt-4 col-xs-12 col-sm-12 col-md-12 text-left">
                             <button type="submit" class="btn btn-primary submit-button">Submit</button>
                         </div>
                     </div>
                 </form>
-                @endsection
-
-
+            </div>
+            @endsection
         </div>
     </body>
 </html>
