@@ -14,6 +14,16 @@ class ReviewController extends Controller
         return $averageRating;
     }
 
+    public function getRatingPercentage(){
+        $fiveRatingPercentage = Review::where('rating',5)
+        ->select('rating',Review::raw('count(*) *100 / (select count(*) from users) as count'))
+        ->groupBy('rating')
+        ->get();
+
+        return $fiveRatingPercentage;
+    }
+    
+
     /**
      * Display a listing of the resource.
      *

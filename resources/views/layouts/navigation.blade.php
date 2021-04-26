@@ -14,7 +14,8 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
-
+                        <button class="btn btn-primary"><a href="/reviews?status=completed">Completed</a></button>
+                        <button class="btn btn-primary"><a href="/reviews?status=pending">Pending</a></button>
                     </x-nav-link>
 
 
