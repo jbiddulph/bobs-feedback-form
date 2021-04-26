@@ -23,7 +23,9 @@
     @endif
 
     <h3>Average rating <strong>{{ $avRating }}</strong></h3>
-
+    
+    <button class="btn btn-primary"><a href="/reviews?status=completed">Completed</a></button>
+    <button class="btn btn-primary"><a href="/reviews?status=pending">Pending</a></button>
     <div class="w-4/5 md:w-auto p-4">
         <div class="table-header-group font-bold p-8">
             <div class="table-cell p-2">No</div>

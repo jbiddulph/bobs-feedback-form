@@ -21,11 +21,13 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        $data = Review::latest()->paginate(5);
+        $data = Review::where('status', '=', request('status', 'pending'))->paginate(5);
 
         return view('reviews.index',compact('data'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
+
+    
 
     /**
      * Show the form for creating a new resource.
