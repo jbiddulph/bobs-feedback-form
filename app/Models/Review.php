@@ -9,6 +9,6 @@ class Review extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'fullName', 'postCode', 'phoneNumber', 'jobNumber', 'feedback', 'rating'
+        'fullName', 'postCode', 'phoneNumber', 'jobNumber', 'feedback', 'rating', 'status'
     ];
 }

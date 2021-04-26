@@ -75,7 +75,7 @@
                     <strong>Status:</strong>
                     <select id="status" name="status" class="form-control">
                         <option value="Pending" {{ $review->status == 'pending' ? 'selected' : '' }}>Pending</option>
-                        <option value="Live" {{ $review->status == 'Live' ? 'selected' : '' }}>Live</option>
+                        <option value="Completed" {{ $review->status == 'Completed' ? 'selected' : '' }}>Completed</option>
                     </select>
                 </div>
             </div>
