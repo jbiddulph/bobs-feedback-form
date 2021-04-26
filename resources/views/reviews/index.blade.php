@@ -4,7 +4,7 @@
 @extends('reviews.layout')
 
 @section('content')
-<div class="bobreviews justify-center">
+<div class="bobreviews">
     <div class="row" style="margin-top: 5rem;">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -26,7 +26,7 @@
     
     <button class="btn btn-primary"><a href="/reviews?status=completed">Completed</a></button>
     <button class="btn btn-primary"><a href="/reviews?status=pending">Pending</a></button>
-    <div class="w-4/5 md:w-auto p-4">
+    <div class="w-80 md:w-auto p-4">
         <div class="table-header-group font-bold p-8">
             <div class="table-cell p-2">No</div>
             <div class="table-cell p-2">Name</div>

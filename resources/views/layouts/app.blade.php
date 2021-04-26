@@ -12,7 +12,12 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
+        <style>
+            .bobreviews {
+                display: inline-flex;
+                align-items: center;
+            }
+        </style>
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
