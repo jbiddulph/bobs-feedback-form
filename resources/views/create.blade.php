@@ -103,6 +103,14 @@
             background-color: #dafdce;
             border-color: #54b665;
         }
+        @media only screen and (max-width: 768px) {
+            .feedback-form-holder {
+                width: 100%;
+            }
+            .row {
+                margin-bottom: 0;
+            }
+        }
     </style>
     </head>
     <body class="antialiased">

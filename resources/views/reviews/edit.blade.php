@@ -49,7 +49,7 @@
             <div class="col-xs-12 col-sm-12 col-md-6">
                 <div class="form-group">
                     <strong>Job Number:</strong>
-                    <input type="text" name="jobNumber" value="JC-{{ $review->jobNumber }}" class="form-control" placeholder="Job Number">
+                    <input type="text" name="jobNumber" value="{{ $review->jobNumber }}" class="form-control" placeholder="Job Number">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
