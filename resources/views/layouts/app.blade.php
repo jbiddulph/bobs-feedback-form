@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <style>
             .bobreviews {
-                display: inline-flex;
+                display: flex;
                 align-items: center;
             }
         </style>

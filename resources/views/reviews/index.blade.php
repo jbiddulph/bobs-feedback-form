@@ -7,28 +7,30 @@
 @extends('reviews.layout')
 
 @section('content')
-<div class="bobreviews">
-    <div class="row" style="margin-top: 5rem;">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Bob The Builder - Review</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('reviews.create') }}"> Create New Review</a>
+<div class="bobreviews flex-col">
+    <div class="info flex-col">
+        <div class="row" style="margin-top: 5rem;">
+            <div class="col-lg-12 margin-tb">
+                <div class="pull-left">
+                    <h2>Bob The Builder - Review</h2>
+                </div>
+                <div class="pull-right">
+                    <a class="btn btn-success" href="{{ route('reviews.create') }}"> Create New Review</a>
+                </div>
             </div>
         </div>
+
+        @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+        @endif
+
+        <h3>Rating 5:{{$ratingPercentage}}</h3>
+        <h3>Average rating <strong>{{ $avRating }}</strong></h3>
     </div>
-
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
-
-<h3>Rating 5:{{$ratingPercentage}}</h3>
-    <h3>Average rating <strong>{{ $avRating }}</strong></h3>
     
-    <div class="w-80 md:w-auto p-4">
+    <div class="w-80 md:w-auto p-4 flex-col">
         <div class="table-header-group font-bold p-8">
             <div class="table-cell p-2">No</div>
             <div class="table-cell p-2">Name</div>
