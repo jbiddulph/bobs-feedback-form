@@ -98,6 +98,11 @@
         label {
             font-size:14px;
         }
+        .alert-success {
+            color: #337444;
+            background-color: #dafdce;
+            border-color: #54b665;
+        }
     </style>
     </head>
     <body class="antialiased">
@@ -126,6 +131,11 @@
                         <div class="pull-left">
                             <h2>Feedback Form</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at mattis elit, et ullamcorper nisi. Mauris mollis massa lacinia leo accumsan, quis fringilla enim congue. Nunc consectetur euismod neque, non dignissim eros finibus ac. Nam quis luctus nisl, sed rhoncus ipsum. Nullam vitae risus leo.<p>
+                            @if($message = Session::get('success'))
+                            <div class="alert alert-success">
+                                <p>{{$message}}</p>
+                            </div>
+                            @endif
                         </div>
                     </div>
                 </div>

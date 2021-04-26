@@ -57,7 +57,7 @@ class ReviewController extends Controller
         Review::create($request->all());
 
         return redirect()->route('addreview')
-                        ->with('success','Review created successfully.');
+                        ->with('success','Success your form has been submitted!');
     }
 
     /**
