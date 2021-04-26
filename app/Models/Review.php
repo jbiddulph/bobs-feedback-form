@@ -11,4 +11,10 @@ class Review extends Model
     protected $fillable = [
         'fullName', 'postCode', 'phoneNumber', 'jobNumber', 'feedback', 'rating', 'status'
     ];
+
+
+    public function getjobNumberAttribute($val)
+    {
+        return 'JC-' . $val;
+    }
 }

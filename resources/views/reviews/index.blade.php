@@ -44,7 +44,7 @@
             <div class="table-cell p-2">{{ $value->fullName }}</div>
             <div class="table-cell p-2">{{ $value->phoneNumber }}</div>
             <div class="table-cell p-2">{{ $value->postCode }}</div>
-            <div class="table-cell p-2">JC-{{ $value->jobNumber }}</div>
+            <div class="table-cell p-2">{{ $value->jobNumber }}</div>
             <div class="table-cell p-2">{{ \Str::limit($value->feedback, 300) }}</div>
             <div class="table-cell p-2">{{ $value->rating }}</div>
             <div class="table-cell p-2">{{ $value->status }}</div>
