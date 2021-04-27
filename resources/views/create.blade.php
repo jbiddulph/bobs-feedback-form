@@ -45,6 +45,12 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/exacti/floating-labels@latest/floating-labels.min.css" media="screen">
     <style>
+    .feedback-form-holder {
+            width: 810px;
+        }
+        .row {
+            margin-bottom:10px;
+        }
         .feedback-form-holder {
             width: 810px;
         }
@@ -133,7 +139,7 @@
             @extends('layouts.boblayout')
 
             @section('content')
-            <div class="feedback-form-holder flex">
+            <div class="feedback-form-holder">
                 <div class="row">
                     <div class="col-lg-12 margin-tb">
                         <div class="pull-left">
