@@ -58,7 +58,7 @@
                     <button class="btn btn-primary bg-yellow-400 p-1 rounded-md text-white text-xs font-bold"><a href="{{ route('reviews.edit',$value->id) }}">Edit</a></button>
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger bg-red-400 p-1 rounded-md text-white text-xs font-bold">Delete</button>
+                    <button onclick="return confirm('Are you sure?')" type="submit" class="btn btn-danger bg-red-400 p-1 rounded-md text-white text-xs font-bold">Delete</button>
                 </form>
             </div>
         </div>
