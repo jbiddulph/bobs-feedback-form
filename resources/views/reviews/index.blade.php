@@ -30,29 +30,29 @@
         <h3>Average rating <strong>{{ $avRating }}</strong></h3>
     </div>
     
-    <div class="w-80 md:w-auto p-4 flex-col">
-        <div class="table-header-group font-bold p-8">
-            <div class="table-cell p-2">No</div>
-            <div class="table-cell p-2">Name</div>
-            <div class="table-cell p-2">Phone number</div>
-            <div class="table-cell p-2">Post Code</div>
-            <div class="table-cell p-2">Job Number</div>
-            <div class="table-cell p-2">Feedback</div>
-            <div class="table-cell p-2">Rating</div>
-            <div class="table-cell p-2">Status</div>
+    <div class="w-80 md:w-auto p-4 flex-col border">
+        <div class="table-header-group font-bold p-8 bg-gray-500 text-white">
+            <div class="table-cell border-white border-r-2 p-2">No</div>
+            <div class="table-cell border-white border-r-2 p-2">Name</div>
+            <div class="table-cell border-white border-r-2 p-2">Phone number</div>
+            <div class="table-cell border-white border-r-2 p-2">Post Code</div>
+            <div class="table-cell border-white border-r-2 p-2">Job Number</div>
+            <div class="table-cell border-white border-r-2 p-2">Feedback</div>
+            <div class="table-cell border-white border-r-2 p-2">Rating</div>
+            <div class="table-cell border-white border-r-2 p-2">Status</div>
             <div class="table-cell p-2" width="280px">Action</div>
         </div>
         @foreach ($data as $key => $value)
-        <div class="table-row-group p-2">
-            <div class="table-cell p-2">{{ ++$i }}</div>
-            <div class="table-cell p-2">{{ $value->fullName }}</div>
-            <div class="table-cell p-2">{{ $value->phoneNumber }}</div>
-            <div class="table-cell p-2">{{ $value->postCode }}</div>
-            <div class="table-cell p-2">{{ $value->jobNumber }}</div>
-            <div class="table-cell p-2">{{ \Str::limit($value->feedback, 300) }}</div>
-            <div class="table-cell p-2">{{ $value->rating }}</div>
-            <div class="table-cell p-2">{{ $value->status }}</div>
-            <div class="table-cell p-2">
+        <div class="table-row-group border border-gray-500 p-2">
+            <div class="table-cell border-gray border-b-2 border-r-2 border-l-2 p-2">{{ ++$i }}</div>
+            <div class="table-cell border-gray border-b-2 border-r-2 p-2">{{ $value->fullName }}</div>
+            <div class="table-cell border-gray border-b-2 border-r-2 p-2">{{ $value->phoneNumber }}</div>
+            <div class="table-cell border-gray border-b-2 border-r-2 p-2">{{ $value->postCode }}</div>
+            <div class="table-cell border-gray border-b-2 border-r-2 p-2">{{ $value->jobNumber }}</div>
+            <div class="table-cell border-gray border-b-2 border-r-2 p-2">{{ \Str::limit($value->feedback, 300) }}</div>
+            <div class="table-cell border-gray border-b-2 border-r-2 p-2">{{ $value->rating }}</div>
+            <div class="table-cell border-gray border-b-2 border-r-2 p-2">{{ $value->status }}</div>
+            <div class="table-cell border-gray border-b-2 border-r-2 p-2">
                 <form action="{{ route('reviews.destroy',$value->id) }}" method="POST">
                     <button class="btn btn-info bg-blue-400 p-1 rounded-md text-white text-xs font-bold"><a href="{{ route('reviews.show',$value->id) }}">Show</a></button>
                     <button class="btn btn-primary bg-yellow-400 p-1 rounded-md text-white text-xs font-bold"><a href="{{ route('reviews.edit',$value->id) }}">Edit</a></button>
