@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="container">
+    <div class="bobs-container m-8">
         @yield('content')
     </div>
 
