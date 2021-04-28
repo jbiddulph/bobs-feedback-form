@@ -34,7 +34,7 @@
         <h3 class="mb-2">Average rating <strong>{{ $avRating }}</strong></h3>
         <h3 class="mb-2">Ratings by count: </h3>
         @foreach ($ratingsByCount as $key => $value)
-            <img src='{{asset(`images/$value->rating.png`)}}' /> ({{$value->count}})
+        <img src="{{ asset("images/{$value->rating}.png") }}"> ({{ $value->count }})
         @endforeach
     </div>
     
