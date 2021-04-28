@@ -33,7 +33,7 @@
         <h3 class="mb-2">Rating 5:{{$ratingPercentage}}</h3>
         <h3 class="mb-2">Average rating <strong>{{ $avRating }}</strong></h3>
         <h3 class="mb-2">Ratings by count: </h3>
-        <div class="flex">
+        <div class="flex mb-4">
             @foreach ($ratingsByCount as $key => $value)
             <div class="flex mr-4"><img src="{{ asset("images/{$value->rating}.png") }}"> (<strong>{{ $value->count }}</strong>)</div>
             @endforeach
