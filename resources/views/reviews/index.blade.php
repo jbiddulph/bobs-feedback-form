@@ -33,9 +33,11 @@
         <h3 class="mb-2">Rating 5:{{$ratingPercentage}}</h3>
         <h3 class="mb-2">Average rating <strong>{{ $avRating }}</strong></h3>
         <h3 class="mb-2">Ratings by count: </h3>
-        @foreach ($ratingsByCount as $key => $value)
-        <img src="{{ asset("images/{$value->rating}.png") }}"> ({{ $value->count }})
-        @endforeach
+        <div class="flex">
+            @foreach ($ratingsByCount as $key => $value)
+            <div class="flex mr-4"><img src="{{ asset("images/{$value->rating}.png") }}"> (<strong>{{ $value->count }}</strong>)</div>
+            @endforeach
+        </div>
     </div>
     
     <table class="border-collapse w-full">
